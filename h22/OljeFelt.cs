@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace h22
-{
+{  
     enum nasjonalitet { Norge, Danmark, Storbritania }; // er dette ok i forhold til oppgave teksten  og hvorfor er den merket med rød 
 
     class OljeFelt: IProduksjonsFelt, IComparable<OljeFelt> // hva er feil her 
@@ -17,13 +17,6 @@ namespace h22
         nasjonalitet land;
 
         
-
-        public OljeFelt(string feltNavn, string eier, int gjenvaerendeOljeMengde) // trenger jeg denne konstruktøren ? 
-        {
-            this.feltNavn = feltNavn;
-            this.eier = eier;
-            this.gjenvaerendeOljeMengde = gjenvaerendeOljeMengde;
-        }
 
         public int GjenvaerendeOljeMengde // skal ikke tillates sett til negativ verdi da skal det settes til 0
         {
@@ -71,30 +64,54 @@ namespace h22
             }
         }
 
-        // oppg H
-        public string kon1 (int gjenvaerendeOljeMengde, string feltNavn, string eier, string land)
+        // oppg H 
+        public OljeFelt (int gjenvaerendeOljeMengde, string feltNavn, string eier, nasjonalitet land)
         {
-            gjenvaerendeOljeMengde = GjenvaerendeOljeMengde;
-            feltNavn = FeltNavn;
-            eier = Eier;
-            land = Land;
+            GjenvaerendeOljeMengde = gjenvaerendeOljeMengde;
+            FeltNavn = feltNavn;
+            Eier = eier;
+            Land = land;
 
         }
         
-        public string kon2 (string feltNavn)
+        public OljeFelt (string feltNavn)
         {
-
+            FeltNavn = feltNavn; 
         }
 
 
 
 
-        
+        public OljeFelt(string feltNavn, string eier, int gjenvaerendeOljeMengde, nasjonalitet land) // trengs denne ? 
+        {
+            this.feltNavn = feltNavn; // hva er forskjell på this. og FeltNavn = feltNavn;
+            this.eier = eier;
+            this.gjenvaerendeOljeMengde = gjenvaerendeOljeMengde;
+            this.land = land;
+        }
+
+
+
+        // oppg i 
+        public override bool Equals(object obj)
+        {
+            if (obj is OljeFelt)
+            {
+                OljeFelt annetFelt = (OljeFelt)obj;
+                return this.feltNavn == annetFelt.feltNavn;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
 
 
-            
+
+
+
 
     }
 }
