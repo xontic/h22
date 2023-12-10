@@ -8,7 +8,7 @@ namespace h22
 {
     enum nasjonalitet { Norge, Danmark, Storbritania }; // er dette ok i forhold til oppgave teksten  og hvorfor er den merket med rød 
 
-    internal class OljeFelt
+    class OljeFelt: IProduksjonsFelt, IComparable<OljeFelt> // hva er feil her 
     {
         public string feltNavn;
         public string eier;
