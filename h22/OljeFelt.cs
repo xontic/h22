@@ -11,9 +11,9 @@ namespace h22
         string feltNavn;
         string eier;
         int gjenvaerendeOljeMengde;  
-        double oljePris; // skal ikke tilhør enoe spesefikt objekt men være felles for klassen 
+        static double oljePris; // skal ikke tilhør enoe spesefikt objekt men være felles for klassen 
 
-        string[] land = ["Norge", "Danmark" ,"Storbritania"];  // her trengs noe for å få vekk feilmelding 
+        string[] land = { "Norge", "Danmark", "Storbritania" }; // er dette ok i forhold til oppgave teksten ?
 
         public OljeFelt(string feltNavn, string eier, int gjenvaerendeOljeMengde)
         {
@@ -67,10 +67,6 @@ namespace h22
                 return false;
             }
         }
-
-
-        // hjelp 
-
         
 
 
