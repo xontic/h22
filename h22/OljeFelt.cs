@@ -92,7 +92,7 @@ namespace h22
 
 
 
-        // oppg i 
+        // oppg j 
         public override bool Equals(object obj)
         {
             if (obj is OljeFelt)
