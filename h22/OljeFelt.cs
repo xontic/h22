@@ -18,7 +18,7 @@ namespace h22
 
         
 
-        public OljeFelt(string feltNavn, string eier, int gjenvaerendeOljeMengde)
+        public OljeFelt(string feltNavn, string eier, int gjenvaerendeOljeMengde) // trenger jeg denne konstruktøren ? 
         {
             this.feltNavn = feltNavn;
             this.eier = eier;
@@ -72,7 +72,7 @@ namespace h22
         }
 
         // oppg H
-        public string kuk (int gjenvaerendeOljeMengde, string feltNavn, string eier, string land)
+        public string kon1 (int gjenvaerendeOljeMengde, string feltNavn, string eier, string land)
         {
             gjenvaerendeOljeMengde = GjenvaerendeOljeMengde;
             feltNavn = FeltNavn;
@@ -81,7 +81,7 @@ namespace h22
 
         }
         
-        public string seb (string feltNavn)
+        public string kon2 (string feltNavn)
         {
 
         }
