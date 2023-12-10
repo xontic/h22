@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace h22
 {
-    string[] land = { "Norge", "Danmark", "Storbritania" }; // er dette ok i forhold til oppgave teksten  og hvorfor er den merket med rød 
+    enum nasjonalitet { Norge, Danmark, Storbritania }; // er dette ok i forhold til oppgave teksten  og hvorfor er den merket med rød 
 
     internal class OljeFelt
     {
@@ -14,6 +14,7 @@ namespace h22
         public string eier;
         public int gjenvaerendeOljeMengde;  
         public static double oljePris; // skal ikke tilhør enoe spesefikt objekt men være felles for klassen 
+        nasjonalitet land;
 
         
 
@@ -70,6 +71,7 @@ namespace h22
             }
         }
 
+        // oppg H
         public string kuk (int gjenvaerendeOljeMengde, string feltNavn, string eier, string land)
         {
             gjenvaerendeOljeMengde = GjenvaerendeOljeMengde;
@@ -83,6 +85,9 @@ namespace h22
         {
 
         }
+
+
+
 
         
 
