@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace h22
 {
+    string[] land = { "Norge", "Danmark", "Storbritania" }; // er dette ok i forhold til oppgave teksten  og hvorfor er den merket med rød 
+
     internal class OljeFelt
     {
-        string feltNavn;
-        string eier;
-        int gjenvaerendeOljeMengde;  
-        static double oljePris; // skal ikke tilhør enoe spesefikt objekt men være felles for klassen 
+        public string feltNavn;
+        public string eier;
+        public int gjenvaerendeOljeMengde;  
+        public static double oljePris; // skal ikke tilhør enoe spesefikt objekt men være felles for klassen 
 
-        string[] land = { "Norge", "Danmark", "Storbritania" }; // er dette ok i forhold til oppgave teksten ?
+        
 
         public OljeFelt(string feltNavn, string eier, int gjenvaerendeOljeMengde)
         {
@@ -67,8 +69,20 @@ namespace h22
                 return false;
             }
         }
-        
 
+        public string kuk (int gjenvaerendeOljeMengde, string feltNavn, string eier, string land)
+        {
+            gjenvaerendeOljeMengde = GjenvaerendeOljeMengde;
+            feltNavn = FeltNavn;
+            eier = Eier;
+            land = Land;
+
+        }
+        
+        public string seb (string feltNavn)
+        {
+
+        }
 
         
 
